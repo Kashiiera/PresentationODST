@@ -18,7 +18,7 @@
             <ColumnDefinition Width="65"/>
             <ColumnDefinition Width="50"/>
             <ColumnDefinition Width="70"/>
-            <ColumnDefinition/>
+            <ColumnDefinition Width="*"/>
         </Grid.ColumnDefinitions>
         <Grid.RowDefinitions>
             <RowDefinition Height="25"/>
@@ -50,10 +50,10 @@
         <ComboBox x:Name="BlockListComboBox" Grid.Column="3" BorderBrush="Black" Text="5000" IsReadOnly="False" Height="20" Background="#FFE0E0E0" SelectionChanged="BlockListComboBox_SelectionChanged">
 
         </ComboBox>
-        <Grid x:Name="BlockGrid" Grid.Row="1" Grid.ColumnSpan="11" Background="#FFBDBDBD">
+        <Grid x:Name="BlockGrid" Grid.Row="1" Grid.ColumnSpan="12" Background="#FFBDBDBD">
             <Grid.ColumnDefinitions>
                 <ColumnDefinition Width="5"/>
-                <ColumnDefinition/>
+                <ColumnDefinition Width="auto"/>
             </Grid.ColumnDefinitions>
             <Grid x:Name="ElementGrid" Grid.Column="1"/>
         </Grid>
