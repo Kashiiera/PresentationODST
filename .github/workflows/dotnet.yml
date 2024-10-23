@@ -63,7 +63,7 @@ jobs:
     - uses: ncipollo/release-action@v1
       with:
         prerelease: true
-        token: ${{ secrets.GITHUB_TOKEN }}
+        token: ${{ secrets.GH_RELEASE_TOKEN }}
         artifacts: Presentation_win64/*
         tag: ${{ needs.build.outputs.product_version }}
         
