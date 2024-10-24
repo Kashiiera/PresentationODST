@@ -51,6 +51,10 @@
     </BootstrapperPackage>
   </ItemGroup>
   <ItemGroup>
+    <ApplicationDefinition Remove="App.xaml" />
+    <Page Include="App.xaml" />
+  </ItemGroup>
+  <ItemGroup>
     <Resource Include="Images\ODSTIcon.ico" />
   </ItemGroup>
   <ItemGroup>
