@@ -153,6 +153,7 @@ namespace PresentationODST.Controls.TagFieldControls
             _TagField.AddElement();
             RefreshBlock();
             BlockListComboBox.SelectedIndex = BlockListComboBox.Items.Count - 1;
+            BlockListComboBox_SelectionChanged(null, null);
             // Expand the tag block if it was collapsed
             if (_TagField.Elements.Count == 1)
             {
@@ -169,6 +170,7 @@ namespace PresentationODST.Controls.TagFieldControls
             _TagField.InsertElement(Index);
             RefreshBlock();
             BlockListComboBox.SelectedIndex = Index;
+            BlockListComboBox_SelectionChanged(null, null);
         }
 
         private void DuplicateButton_Click(object sender, RoutedEventArgs e)
@@ -178,7 +180,8 @@ namespace PresentationODST.Controls.TagFieldControls
             int CurrentIndex = BlockListComboBox.SelectedIndex;
             _TagField.DuplicateElement(CurrentIndex);
             RefreshBlock();
-            BlockListComboBox.SelectedIndex = BlockListComboBox.Items.Count - 1; // Duplicate will send the new block to the end
+            BlockListComboBox.SelectedIndex = BlockListComboBox.Items.Count - 1; // Duplicate will send the new block to the end         
+            BlockListComboBox_SelectionChanged(null, null);
         }
 
         private void DeleteButton_Click(object sender, RoutedEventArgs e)
@@ -198,7 +201,8 @@ namespace PresentationODST.Controls.TagFieldControls
             if (_TagField.Elements.Count > 1)
             {
                 BlockListComboBox.SelectedIndex = CurrentIndex - 1;
-            }  
+            }
+            BlockListComboBox_SelectionChanged(null, null);
         }
 
         private void DeleteAllButton_Click(object sender, RoutedEventArgs e)
